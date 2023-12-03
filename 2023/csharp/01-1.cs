@@ -2,11 +2,9 @@ using System.Text.RegularExpressions;
 
 namespace r3im.aof.d01;
 
-static class Task1
-{
+public static class Task1 {
 
-    public static string run()
-    {
+    public static string run() {
         Regex digit = new Regex("\\d");
         var output = input
             .Split("\n")
@@ -15,11 +13,11 @@ static class Task1
             .Select(x => int.Parse(x))
             .Sum()
             .ToString()
-            ;
+            ; 
         return output;
     }
 
-    static string input =
+    static string input = 
 
 // """
 // 1abc2

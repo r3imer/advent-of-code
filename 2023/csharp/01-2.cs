@@ -2,7 +2,7 @@ using System.Text.RegularExpressions;
 
 namespace r3im.aof.d01;
 
-static class Task2 {
+public static class Task2 {
 
     public static string run() {
         Regex[] digits = [ 
