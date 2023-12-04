@@ -13,6 +13,9 @@ if (args.Length == 0) {
         "03" => 
             r3im.aof.d03.Task1.run() + "\n" +
             r3im.aof.d03.Task2.run(),
+        "04" => 
+            r3im.aof.d04.Task1.run() + "\n" +
+            r3im.aof.d04.Task2.run(),
         _ => $"{args[0]} not implemented",
     };
 }
