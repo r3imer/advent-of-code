@@ -1,19 +1,34 @@
+using System.Text.RegularExpressions;
+
 namespace r3im.aof.d02;
 
 public static class Task2 {
 
     public static string run() {
+        var blue = new Regex(@"(\d+) blue");
+        var red = new Regex(@"(\d+) red");
+        var green = new Regex(@"(\d+) green");
         var lines = input.Split('\n');
         var output = lines
-            .JoinToString('\n')
+            .Select((x,i) => new {
+                id    = i + 1,
+                blue  = blue.Matches(x).max(), 
+                red   = red.Matches(x).max(), 
+                green = green.Matches(x).max(),
+            })
+            .Select(x => x.blue * x.green * x.red)
+            .Sum()
+            .ToString()
             ;
             
         return output;
     }
 
+    static int max(this MatchCollection x) 
+        => x.Select(x=>x.Groups.Values.Select(x=>x.Value).Last()).Select(x=>int.Parse(x)).Max();
+
     static string input = 
-        "";
-        // File.ReadAllText("02.txt").Trim();
+        File.ReadAllText("02.txt").Trim();
 
 // """
 // Game 1: 3 blue, 4 red; 1 red, 2 green, 6 blue; 2 green
