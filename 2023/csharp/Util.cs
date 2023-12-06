@@ -7,6 +7,12 @@ public static class String {
         => string.Join(c, arr);
     public static string JoinToString(this IEnumerable<string> arr, string s) 
         => string.Join(s, arr);
-    public static string Log<T>(this T x) 
-        => JsonSerializer.Serialize(x);
+    public static T LogJson<T>(this T x, string before = "", string after = "") {
+        Console.WriteLine(before + JsonSerializer.Serialize(x) + after);
+        return x;
+    }
+    public static T Log<T>(this T x, string before = "", string after = "") {
+        Console.WriteLine(before + x + after);
+        return x;
+    }
 }
