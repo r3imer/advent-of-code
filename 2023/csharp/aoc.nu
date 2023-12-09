@@ -19,7 +19,7 @@ def "main init" [day: int] {
   | query web -q "code em"
 
   let str_day = $day | fill -w 2 -c 0 -a r
-  $main | save -f $'($str_day).main.txt'
+  $main | save -f $'($str_day).main.html'
   $sample | to text | save -r -f $'($str_day)_s1_0' # TODO: split in multiple files
   # { 
   #   main: $main
