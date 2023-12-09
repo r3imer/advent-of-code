@@ -20,7 +20,7 @@ def "main init" [day: int] {
 
   let str_day = $day | fill -w 2 -c 0 -a r
   $main | save -f $'($str_day).main.txt'
-  $sample | to text | save -r -f $'($str_day)_sample'
+  $sample | to text | save -r -f $'($str_day)_s1_0' # TODO: split in multiple files
   # { 
   #   main: $main
   #   keywords: $keywords
