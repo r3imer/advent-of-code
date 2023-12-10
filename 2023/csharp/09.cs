@@ -52,9 +52,7 @@ public static class Task {
                 .Select(x => int.Parse(x))
                 .ToArray()
             )
-            .LogJson()
             .Select(x => RecDiffFirst(x))
-            .LogJson()
             .Sum()
             .ToString()
             ;
