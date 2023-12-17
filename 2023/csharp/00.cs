@@ -11,15 +11,15 @@ public static class Task {
         };
     }
 
-    public static string part1(string[] input) {
-        var output = input
+    public static string part1(string[] lines) {
+        var output = lines
             .JoinToString('\n')
             ;
         return output;
     }
 
-    public static string part2(string[] input) {
-        var output = input
+    public static string part2(string[] lines) {
+        var output = lines
             .JoinToString('\n')
             ;
         return output;
