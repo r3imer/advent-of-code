@@ -16,6 +16,8 @@ if (args.Length == 0) {
         "04" => 
             r3im.aof.d04.Task1.run() + "\n" +
             r3im.aof.d04.Task2.run(),
+        "05" => 
+            r3im.aof.d05.Task.run(p: args[1], f: args[2]),
         "06" => 
             r3im.aof.d06.Task1.run() + "\n" +
             r3im.aof.d06.Task2.run(),
